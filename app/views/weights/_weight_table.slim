@@ -5,9 +5,10 @@ table
       th Weight
   tbody
     - current_user.weights.each do |weight|
-      tr
-        td = weight.value
-        td = weight.date
-        td = link_to "show", weight
-        td = link_to "edit", edit_weight_path(weight)
-        td  = link_to "delete", weight, method: :delete, data: { confirm: "Are you sure?"}
+      - if weight.id
+        tr
+          td = weight.value
+          td = weight.date
+          td = link_to "show", weight
+          td = link_to "edit", edit_weight_path(weight)
+          td  = link_to "delete", weight, method: :delete, data: { confirm: "Are you sure?"}
