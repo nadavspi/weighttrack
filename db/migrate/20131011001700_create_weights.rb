@@ -1,7 +1,7 @@
 class CreateWeights < ActiveRecord::Migration
   def change
     create_table :weights do |t|
-      t.decimal :weight, precision: 5, scale: 2
+      t.decimal :value, precision: 5, scale: 2
       t.integer :user_id
       t.date :date
 

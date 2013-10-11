@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 20131011001700) do
   add_index "users", ["remember_token"], name: "index_users_on_remember_token"
 
   create_table "weights", force: true do |t|
-    t.decimal  "weight",     precision: 5, scale: 2
+    t.decimal  "value",      precision: 5, scale: 2
     t.integer  "user_id"
     t.date     "date"
     t.datetime "created_at"

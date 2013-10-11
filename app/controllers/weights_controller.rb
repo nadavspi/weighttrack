@@ -10,12 +10,8 @@ class WeightsController < ApplicationController
   end
 
   def create
-    @weight = current_user.weights.build(weight_params)
-    if @weight.save
-      redirect_to weights_path
-    else
-      render 'new'
-    end
+    @weight = current_user.weights.create(weight_params)
+    redirect_to weights_path
   end
 
   def edit
@@ -39,7 +35,7 @@ class WeightsController < ApplicationController
   private
 
     def weight_params
-      params.require(:weight).permit(:date)
+      params.require(:weight).permit(:date, :value)
     end
    
 end
