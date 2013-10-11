@@ -1,16 +1,4 @@
 h1 Your weights
-= link_to "new", new_weight_path
 
-table
-  thead
-    tr
-      th Date
-      th Weight
-  tbody
-    - current_user.weights.each do |weight|
-      tr
-        td = weight.date
-        td = weight.value
-        td = link_to "show", weight
-        td = link_to "edit", edit_weight_path(weight)
-        td  = link_to "delete", weight, method: :delete, data: { confirm: "Are you sure?"}
+= render "new_weight"
+= render "weight_table"
