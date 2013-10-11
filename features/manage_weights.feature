@@ -8,15 +8,17 @@ Background:
 
 Scenario: View existing weights
   Given I have existing weights
-  When I view the weights index page
+  When I visit the weights index page
   Then I will see all of my existing weights
 
 Scenario: Add a valid weight
+  Given I am at the new weight page
   And I enter a valid weight
   When I press submit
   Then the weight will be added
 
 Scenario: Add an invalid weight
+  Given I am at the new weight page
   And I enter an invalid weight
   When I press submit
   Then I will see an error message
