@@ -5,10 +5,14 @@ class WeightsController < ApplicationController
     @weights = current_user.weights.paginate(page: params[:page])
   end
 
+  def new
+    @weight = current_user.weights.new
+  end
+
   def create
-    @weight = current_user.weights.build(params[:weight])
+    @weight = current_user.weights.build(weight_params)
     if @weight.save
-      redirect_to @weight
+      redirect_to weights_path
     else
       render 'new'
     end
