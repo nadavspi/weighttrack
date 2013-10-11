@@ -20,15 +20,15 @@ class WeightsController < ApplicationController
 
   def update
     @weight = current_user.weights.find_by_id(params[:id])
-    if @weighin.update(weight_params)
-      redirect_to @weighin
+    if @weight.update(weight_params)
+      redirect_to @weight
     else
       render 'edit'
     end
   end
 
   def destroy
-    @weight.destroy
+    current_user.weights.find_by_id(params[:id]).destroy
     redirect_to 'index'
   end
 
