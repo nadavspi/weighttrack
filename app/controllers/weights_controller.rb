@@ -5,6 +5,10 @@ class WeightsController < ApplicationController
     @weights = current_user.weights.paginate(page: params[:page])
   end
 
+  def show
+    @weight = current_user.weights.find_by_id(params[:id])
+  end
+
   def new
     @weight = current_user.weights.new
   end
