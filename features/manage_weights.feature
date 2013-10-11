@@ -25,13 +25,13 @@ Scenario: Delete an existing weight
   Then the weight will be deleted
 
 Scenario: Add a valid weight
-  Given I visit the new weight page
+  Given I visit the weights index page
   And I enter a valid weight
   When I press submit
   Then the weight will be added
 
 Scenario: Add an invalid weight
-  Given I visit the new weight page
+  Given I visit the weights index page
   And I enter an invalid weight
   When I press submit
   Then the weight will not be added
