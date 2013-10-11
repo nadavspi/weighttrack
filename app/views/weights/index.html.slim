@@ -6,8 +6,8 @@ table
   tbody
     - current_user.weights.each do |weight|
       tr
-        td weight.date
-        td weight.weight
+        td = weight.date
+        td = weight.weight
         td 
           = link_to "edit", edit_weight_path(weight)
           = link_to "delete", weight, method: :delete
