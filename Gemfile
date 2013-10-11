@@ -29,6 +29,7 @@ end
 
 group :development, :test do
   gem 'spork-rails'
+  gem 'rspec-rails'
 end
 
 group :test do
