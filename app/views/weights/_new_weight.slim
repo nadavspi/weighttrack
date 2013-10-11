@@ -1,0 +1,5 @@
+= form_for @weight do |f|
+  = f.text_field :value, placeholder: "Weight"
+  = f.text_field :date, value: Time.now.strftime("%m/%d/%Y")
+
+  = f.submit "Submit"
