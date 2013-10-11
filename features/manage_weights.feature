@@ -12,17 +12,17 @@ Scenario: View existing weights
   Then I will see all of my existing weights
 
 Scenario: Add a valid weight
-  Given I am at the new weight page
+  Given I visit the new weight page
   And I enter a valid weight
   When I press submit
   Then the weight will be added
 
 Scenario: Add an invalid weight
-  Given I am at the new weight page
+  Given I visit the new weight page
   And I enter an invalid weight
   When I press submit
-  Then I will see an error message
-  And the weight will not be added
+  Then the weight will not be added
+  And I will see an error message
 
 
 
