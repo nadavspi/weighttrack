@@ -17,6 +17,7 @@ gem 'slim'
 gem 'bourbon'
 gem 'neat'
 
+gem 'griddler'
 
 gem 'uglifier', '>= 1.3.0'
 gem 'will_paginate', '~> 3.0'

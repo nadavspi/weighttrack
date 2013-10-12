@@ -72,6 +72,9 @@ GEM
       railties (>= 3.0.0)
     gherkin (2.11.8)
       multi_json (~> 1.3)
+    griddler (0.6.1)
+      htmlentities
+      rails (>= 3.2.0)
     haml (4.0.3)
       tilt
     haml-rails (0.4)
@@ -80,6 +83,7 @@ GEM
       haml (>= 3.1, < 4.1)
       railties (>= 3.1, < 4.1)
     hike (1.2.3)
+    htmlentities (4.3.1)
     i18n (0.6.5)
     jbuilder (1.5.2)
       activesupport (>= 3.0.0)
@@ -186,6 +190,7 @@ DEPENDENCIES
   cucumber-rails
   database_cleaner
   factory_girl_rails
+  griddler
   haml-rails
   jbuilder (~> 1.2)
   jquery-rails
