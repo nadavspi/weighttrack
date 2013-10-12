@@ -15,8 +15,12 @@ class WeightsController < ApplicationController
   end
 
   def create
-    @weight = current_user.weights.create(weight_params)
-    redirect_to weights_path
+    @weight = current_user.weights.new(weight_params)
+    if @weight.save
+      redirect_to weights_path
+    else 
+      render 'index'
+    end
   end
 
   def edit
