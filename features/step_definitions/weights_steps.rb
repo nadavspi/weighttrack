@@ -22,11 +22,11 @@ Given(/^I visit the new weight page$/) do
 end
 
 Given(/^I enter a valid weight$/) do
-  fill_in "Weight", with: 155.55
+  fill_in "weight[value]", with: 155.55
 end
 
 Given(/^I enter an invalid weight$/) do
-  fill_in "Weight", with: 1000
+  fill_in "weight[value]", with: 1000
 end
 
 When(/^I press submit$/) do
