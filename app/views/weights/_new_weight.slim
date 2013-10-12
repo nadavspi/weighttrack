@@ -1,4 +1,4 @@
-= form_for @weight do |f|
+= form_for @weight, html: { class: 'weight-form' } do |f|
   | My weight for 
   = f.text_field :date, value: Time.now.strftime("%m/%d/%Y")
   '   is
