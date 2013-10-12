@@ -1,0 +1,4 @@
+- if @weight.errors.any?
+    ul.error
+      - @weight.errors.full_messages.each do |msg|
+        li #{msg}
