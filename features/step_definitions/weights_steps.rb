@@ -39,7 +39,7 @@ Then(/^the weight will not be added$/) do
 end
 
 Then(/^I will see an error message$/) do
-  pending # express the regexp above with the code you wish you had
+  page.should have_selector(".error")
 end
 
 Given(/^I have an existing weight$/) do
