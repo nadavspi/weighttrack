@@ -1,13 +1,16 @@
 table
   thead
     tr
-      th Date
       th Weight
+      th Date
+      th
+      th
+      
   tbody
     - current_user.weights.each do |weight|
       - if weight.id
         tr
-          td = weight.value
+          td <strong>#{weight.value}</strong>
           td = weight.date
           td = link_to "edit", edit_weight_path(weight)
           td  = link_to "delete", weight, method: :delete, data: { confirm: "Are you sure?"}
