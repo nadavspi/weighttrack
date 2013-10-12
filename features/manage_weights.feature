@@ -26,20 +26,20 @@ Scenario: Delete an existing weight
 
 Scenario: Add a valid weight
   Given I visit the weights index page
-  And I enter a valid weight
+  And I enter a weight of 156
   When I press submit
   Then the weight will be added
 
 Scenario: Add an invalid weight
   Given I visit the weights index page
-  And I enter an invalid weight
+  And I enter a weight of 1000
   When I press submit
   Then the weight will not be added
   And I will see an error message
 
 Scenario: Multiple weights with the same date
   Given I visit the weights index page
-  And I enter a valid weight
+  And I enter a weight of 155
   When I enter a second valid weight with the same date
   Then the second weight will replace the first
 

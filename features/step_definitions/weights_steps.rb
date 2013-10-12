@@ -21,12 +21,9 @@ Given(/^I visit the new weight page$/) do
   visit new_weight_path
 end
 
-Given(/^I enter a valid weight$/) do
-  fill_in "weight[value]", with: 155.55
-end
-
-Given(/^I enter an invalid weight$/) do
-  fill_in "weight[value]", with: 1000
+Given(/^I enter a weight of (\d*.\d*)$/) do |value|
+  @weight = value
+  fill_in "weight[value]", with: value
 end
 
 When(/^I press submit$/) do
@@ -34,11 +31,11 @@ When(/^I press submit$/) do
 end
 
 Then(/^the weight will be added$/) do
-  page.should have_content("155.55")
+  page.should have_content(@weight)
 end
 
 Then(/^the weight will not be added$/) do
-  page.should_not have_content("1000")
+  page.should_not have_content(@weight)
 end
 
 Then(/^I will see an error message$/) do
