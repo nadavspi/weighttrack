@@ -6,6 +6,18 @@
   border-bottom: 2px dotted #777
   color: #777
   text-align: center
+  width: 150px
+  +transition (all 0.2s ease)
+  &:focus
+    color: $blue
+    border-color: $blue
 
-#weight_value
-  font-size: 1.2rem
+.WeightForm-button
+  font-size: 1rem
+  border: none
+  background-color: $light-red
+  padding: 15px
+  border-radius: 8px
+  +transition (all 0.2s ease)
+  &:hover
+    background-color: darken($light-red, 15%)

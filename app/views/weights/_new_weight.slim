@@ -1,14 +1,13 @@
-= form_for @weight, html: { class: 'WeightForm' } do |f|
-  = render 'error_messages'
+= render 'error_messages'
+= form_for @weight, html: { class: 'WeightForm lead-text' } do |f|
 
   | My weight for 
   = f.text_field :date, value: Time.now.strftime("%m/%d/%Y")
   '   is
 
   = f.text_field :value
-  
-  <br>
-  = f.submit "Submit"
+  '     
+  = f.submit "Submit", class: 'WeightForm-button'
 
 javascript:
   $(document).ready(function(){
