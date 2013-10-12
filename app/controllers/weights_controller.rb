@@ -3,6 +3,7 @@ class WeightsController < ApplicationController
 
   def index
     @weights = current_user.weights.paginate(page: params[:page])
+    @weight = current_user.weights.new
   end
 
   def show
