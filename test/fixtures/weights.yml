@@ -3,7 +3,7 @@
 # Table name: weights
 #
 #  id         :integer          not null, primary key
-#  weight     :decimal(5, 2)
+#  value      :decimal(5, 2)
 #  user_id    :integer
 #  date       :date
 #  created_at :datetime

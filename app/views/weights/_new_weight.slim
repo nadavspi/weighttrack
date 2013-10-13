@@ -2,14 +2,14 @@
 = form_for @weight, html: { class: 'WeightForm lead-text' } do |f|
 
   | My weight for 
-  = f.text_field :date, value: Time.now.strftime("%m/%d/%Y")
+  = f.text_field :date, value: Time.now.strftime("%Y/%m/%d/")
   '   is
 
   = f.text_field :value
   '     
   = f.submit "Submit", class: 'WeightForm-button'
 
-javascript:
-  $(document).ready(function(){
-    $("#weight_value").focus();
-    });
+/ javascript:
+/   $(document).ready(function(){
+/     $("#weight_value").focus();
+/     });

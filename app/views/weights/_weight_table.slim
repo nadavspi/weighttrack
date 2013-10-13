@@ -8,7 +8,7 @@ table
       
   tbody
     - current_user.weights.each do |weight|
-      - if weight.id
+      - if weight.valid?
         tr
           td <strong>#{weight.value}</strong>
           td = weight.date.strftime("%m/%d/%Y")
