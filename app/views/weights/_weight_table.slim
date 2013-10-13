@@ -9,10 +9,6 @@ table.WeightTable
   tbody
     - @weights.each do |weight|
       - if weight.valid?
-        <tr id="weight-#{weight.id}">
-          td <strong>#{weight.value}</strong>
-          td = weight.date.strftime("%m/%d/%Y")
-          td = link_to "edit", edit_weight_path(weight)
-          td  = link_to "delete", weight, method: :delete, data: { confirm: "Are you sure?"}
+        = render weight
 
 = will_paginate @weights
