@@ -21,6 +21,7 @@ gem 'griddler'
 
 gem 'uglifier', '>= 1.3.0'
 gem 'will_paginate', '~> 3.0'
+gem 'best_in_place', git: 'https://github.com/bernat/best_in_place'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'

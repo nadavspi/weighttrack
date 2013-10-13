@@ -32,10 +32,14 @@ class WeightsController < ApplicationController
 
   def update
     @weight = current_user.weights.find_by_id(params[:id])
-    if @weight.update(weight_params)
-      redirect_to @weight
-    else
-      render 'edit'
+    respond_to do |format|
+      if @weight.update(weight_params)
+        format.html { redirect_to @weight }
+        format.json { respond_with_bip @weight }
+      else
+        format.html { render 'edit' }
+        format.json { respond_with_bip @weight }
+      end
     end
   end
 
