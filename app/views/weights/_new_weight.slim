@@ -1,6 +1,6 @@
 = render 'error_messages'
 .WeightForm
-  = form_for @weight, html: { class: 'lead-text' } do |f|
+  = form_for @weight, html: { class: 'lead-text' }, remote: true do |f|
     .WeightForm-fields
       | My weight for 
       = f.text_field :date, value: Time.now.strftime("%Y/%m/%d")
