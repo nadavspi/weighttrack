@@ -1,2 +1,5 @@
 = render "new_weight"
 = render "weight_table"
+
+aside.export.align-right
+  p #{link_to "Download csv", weights_path(format: "csv")}
