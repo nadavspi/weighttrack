@@ -3,7 +3,12 @@ class WeightsController < ApplicationController
 
   def index
     @weights = current_user.weights.paginate(page: params[:page], per_page: 7)
+    @weights_all = current_user.weights
     @weight = current_user.weights.new
+    respond_to do |format|
+      format.html
+      format.csv { send_data @weights_all.to_csv }
+    end
   end
 
   def show

@@ -18,6 +18,15 @@ class Weight < ActiveRecord::Base
 
   before_validation :default_date
 
+  def self.to_csv
+    CSV.generate do |csv|
+      csv << [:date, :weight]
+      all.each do |weight|
+        csv << weight.attributes.values_at("date", "value") 
+      end
+    end
+  end
+
   private
   
     def default_date
