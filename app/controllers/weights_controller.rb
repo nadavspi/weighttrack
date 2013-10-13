@@ -41,7 +41,10 @@ class WeightsController < ApplicationController
 
   def destroy
     current_user.weights.find_by_id(params[:id]).destroy
-    redirect_to weights_path
+    respond_to do |format|
+      format.html { redirect_to weights_path }
+      format.js
+    end
   end
 
   private
