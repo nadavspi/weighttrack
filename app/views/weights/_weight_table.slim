@@ -9,7 +9,7 @@ table.WeightTable
   tbody
     - current_user.weights.each do |weight|
       - if weight.valid?
-        tr
+        <tr id="weight-#{weight.id}">
           td <strong>#{weight.value}</strong>
           td = weight.date.strftime("%m/%d/%Y")
           td = link_to "edit", edit_weight_path(weight)
