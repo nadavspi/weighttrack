@@ -2,7 +2,7 @@ class WeightsController < ApplicationController
   before_filter :authorize
 
   def index
-    @weights = current_user.weights.paginate(page: params[:page], per_page: 15)
+    @weights = current_user.weights.paginate(page: params[:page], per_page: 7)
     @weight = current_user.weights.new
   end
 
