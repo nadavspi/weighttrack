@@ -15,4 +15,12 @@ class Weight < ActiveRecord::Base
   validates :value, :numericality => {:greater_than_or_equal_to => 35.0, :less_than_or_equal_to => 700.0}
   validates :value, :date, presence: true
   default_scope order: 'weights.date DESC'
+
+  before_validation :default_date
+
+  private
+  
+    def default_date
+      self.date ||= Date.today
+    end
 end
