@@ -2,12 +2,10 @@
   <tr id="weight-#{weight.id}">
     td <strong>#{weight.value}</strong>
     td = weight.date
-    td = link_to "edit", edit_weight_path(weight)
     td  = link_to "delete", weight, method: :delete, data: { confirm: "Are you sure?"}, remote: true
 - else
   <tr id="weight-#{weight.id}">
     td <strong>#{best_in_place weight, :value}</strong>
     td = best_in_place weight, :date, type: :date
-    td = link_to "edit", edit_weight_path(weight)
     td = link_to "delete", weight, method: :delete, 
           data: { confirm: "Are you sure?"}, remote: true
