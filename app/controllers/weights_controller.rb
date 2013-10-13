@@ -40,7 +40,7 @@ class WeightsController < ApplicationController
   end
 
   def destroy
-    current_user.weights.find_by_id(params[:id]).destroy
+    @weight = current_user.weights.find_by_id(params[:id]).destroy
     respond_to do |format|
       format.html { redirect_to weights_path }
       format.js
