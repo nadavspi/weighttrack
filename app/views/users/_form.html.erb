@@ -7,3 +7,8 @@
   <%= form.label :password %>
   <%= form.password_field :password %>
 </div>
+
+<div class='timezone-field'>
+  <%= form.label :time_zone %>
+  <%= form.time_zone_select :time_zone, ActiveSupport::TimeZone.us_zones %>
+</div>
