@@ -1,5 +1,7 @@
 = render "new_weight"
 
+= content_tag :div, "", id: 'WeightChart', data: {weights: @weights}
+
 = render "weight_table"
 
 aside.export.align-right
