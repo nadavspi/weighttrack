@@ -15,5 +15,7 @@
 //= require jquery.ui.datepicker
 //= require best_in_place.purr
 //= require best_in_place
+//= require raphael
+//= require morris
 //= require turbolinks
 //= require_tree .

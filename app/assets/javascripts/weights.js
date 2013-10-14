@@ -15,5 +15,15 @@ $(function() {
   });
 });
 
+$(function() {
+  new Morris.Line({
+    element: 'WeightChart',
+    data: $('#WeightChart').data('weights'),
+    xkey: 'date',
+    ykeys: ['value'],
+    labels: ['Weight']
+  });
+});
+
 
 
