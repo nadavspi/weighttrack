@@ -21,7 +21,9 @@ $(function() {
     data: $('#WeightChart').data('weights'),
     xkey: 'date',
     ykeys: ['value'],
-    labels: ['Weight']
+    labels: ['Weight'],
+    xLabels: 'day',
+    xLabelAngle: 45
   });
 });
 
